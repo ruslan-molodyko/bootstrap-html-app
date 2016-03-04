@@ -7,4 +7,5 @@ Just run this in command line for start working:
 gulp
 ```
 
-and go to [http://localhost:5000](http://localhost:5000) for watch results
+and go to <a href="http://localhost:5000" target="_blank">http://localhost:5000</a> for watch results
+
