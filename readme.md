@@ -1,7 +1,7 @@
 # bootstrap-html-app
 Bootstrap html app with gulp, jade, stylus, browserify
 
-Just use this command for start working:
+Just run this in command line for start working:
 
 ```
 gulp
