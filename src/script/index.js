@@ -3,5 +3,5 @@
  */
 "use strict";
 
-var module = require('./module/module.js');
-console.log(module);
+var module1 = require('./module/module.js');
+console.log(module1);

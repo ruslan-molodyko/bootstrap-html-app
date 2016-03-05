@@ -2,7 +2,8 @@
  * Created by admin on 04.03.2016.
  */
 var gulp = require('gulp'),
-    browserify = require('gulp-browserify'),
+    browserify = require('browserify'),
+    source = require('vinyl-source-stream'),
     concat = require('gulp-concat'),
     stylus = require('gulp-stylus'),
     jade = require('gulp-jade'),
@@ -20,9 +21,10 @@ gulp.task('serve', function() {
 });
 
 gulp.task('scripts', function() {
-    gulp.src(['src/script/**/*.js'])
-        .pipe(browserify())
-        .pipe(concat('all.js'))
+    // Path to endpoint javascript file
+    return browserify('src/script/index.js')
+        .bundle()
+        .pipe(source('all.js'))
         .pipe(gulp.dest('public/script'))
         .pipe(livereload());
 });
